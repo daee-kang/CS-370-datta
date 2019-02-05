@@ -9,9 +9,11 @@ int main(void){
 		pid = wait();
 		printf(1, "Child %d is done executing \n", pid);
 	} else if(pid == 0){
-		char *argv[2];
+		char *argv[3];
 		argv[0] = "echo";
 		argv[1] = "Hello xv6 world";
+		argv[2] = 0;
+		
 	
 		exec("/echo", argv);
 
