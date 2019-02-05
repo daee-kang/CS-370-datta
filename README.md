@@ -1,6 +1,6 @@
 # CS-370-datta
-love this class
+love this class haha 
 
 xv6
 
-spring 2019
+unlv spring 2019
