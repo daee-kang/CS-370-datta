@@ -15,7 +15,7 @@ int main(void){
 		argv[2] = 0;
 		
 	
-		exec("/echo", argv);
+		exec(argv[0], argv);
 
 		exit();
 	} else {
