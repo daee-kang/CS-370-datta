@@ -177,14 +177,21 @@ if(isTimeZone) {//lol here we go
     time->hour = time->hour % 12; 
   }  
 
-  //printing time
+//printing time
   printf(1, "The date is: ");
-  printf(1, " %d:%d:%d ", time->hour, time->minute, time->second);
+  printf(1, "%d:", time->hour);
+  //ternary time
+  (time->minute < 10) ? printf(1, "0%d:", time->minute) : printf(1, "%d:", time->minute);
+  (time->second < 10) ? printf(1, "0%d ", time->second) : printf(1, "%d ", time->second);
+
+  //print am or pm
   if(print12){
     if(isPm){
       printf(1, "PM ");
     } else printf(1, "AM ");
   }
+  
+  //print date
   printf(1, "on %d/%d/%d.\n", time->month, time->day, time->year);
   
   //goodbye
