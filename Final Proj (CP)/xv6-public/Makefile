@@ -186,11 +186,11 @@ UPROGS=\
 	_time\
 	_date\
 	_benchmark\
+	_cp\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
 	./mkfs fs.img test.sh $(UPROGS)
-	./mkfs fs.img input.txt $(UPROGS)
 
 
 -include *.d
@@ -258,7 +258,7 @@ qemu-nox-gdb: fs.img xv6.img .gdbinit
 EXTRA=\
 	mkfs.c ulib.c user.h cat.c echo.c forktest.c grep.c kill.c\
 	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
-	printf.c umalloc.c _sample_program.c script.c benchmark.c\
+	printf.c umalloc.c _sample_program.c script.c benchmark.c cp.c\
 	README dot-bochsrc *.pl toc.* runoff runoff1 runoff.list\
 	.gdbinit.tmpl gdbutil\
 
